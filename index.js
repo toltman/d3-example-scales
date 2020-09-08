@@ -29,7 +29,8 @@ function showData2(clients) {
   let yScale = d3
     .scaleBand()
     .range([0, 200])
-    .domain(clients.map((d) => d.Name));
+    .domain(clients.map((d) => d.Name))
+    .padding(0.1);
   let join = container.selectAll("rect").data(clients);
 
   join
